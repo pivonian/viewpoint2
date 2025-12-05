@@ -43,8 +43,10 @@ body {
 .nav.scrolled {
     transition: var(--transition);
     background: 
-    linear-gradient(to top, rgba(0, 0, 0, 0) 0%, #000000 100%),
-    var(--backgroundColour);
+        linear-gradient(to top, rgba(0, 0, 0, 0) 0%, #000000 100%),
+        var(--backgroundColour);
+    border-bottom: var(--accent1) solid 2px;
+    box-shadow: var(--accent1) 0 0 20px;
 }
 
 .nav a {
@@ -162,11 +164,11 @@ button img {
 }
 
 .scroll-container {
-    width: 90%; /* Set a fixed width for the container */
-    overflow-x: scroll; /* Enable horizontal scrolling when content overflows */
-    overflow-y: hidden; /* Hide vertical scrollbar if it might appear */
-    white-space: nowrap; /* Prevent content from wrapping to the next line */
-    padding: 3rem 1.5rem 1.2rem; /* Optional: for spacing */
+    width: 90%;
+    overflow-x: scroll;
+    overflow-y: hidden; 
+    white-space: nowrap;
+    padding: 3rem 1.5rem 1.2rem;
     margin: 0 auto;
 }
 
@@ -175,10 +177,10 @@ button img {
 }
 
 .showContent img {
-    display: inline-block; /* Ensure items are treated as inline blocks */
-    width: 20rem; /* Example width for each item */
+    display: inline-block;
+    width: 20rem;
     height: auto;
-    margin-right: 10px; /* Spacing between items */
+    margin-right: 10px;
     box-shadow: #0000009b 0 10px 10px;
     max-width: 100%;
     border-radius: 5px;
@@ -196,23 +198,31 @@ button img {
 #shows h1{
     left: 5rem;
     position: absolute;
-    margin: -2rem 0;
+    margin: -3.7rem 0;
     font-size: 3rem;
+}
+
+#shows h5{
+    left: 5rem;
+    position: absolute;
+    margin: -0.01rem 0;
+    font-size: 1.2rem;
+    color: var(--muted)
 }
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-    height: 7px;                 /* Thickness of the scrollbar */
+    height: 7px;
     max-width: 7px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #1a1a1a;          /* Track color */
+    background: #1a1a1a;
     border-radius: 100px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--muted);   /* Scrollbar handle */
+    background: var(--muted);
     border-radius: 100px;
 }
 
@@ -222,7 +232,7 @@ button img {
 }
 
 .buffer {
-    height: 3rem;
+    height: 4rem;
 }
 
 footer {
