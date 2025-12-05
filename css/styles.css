@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* Colours */
+    --backgroundColour: #0e0e0e /* grey atm but I think I like #020202 more */;
+    --accent1: #e11f4c;
+    --accent2: #81122c;
+    --muted: #838383;
+
+    --transition: All 0.15s ease-in-out;
+
+    color: white;
+    background-color: var(--backgroundColour);
+
+    font-family: "Public Sans";
+}
+
+button {
+    appearance: none;
+    -webkit-appearance: none;
+
+    border: none;
+    box-shadow: none;
+}
+
+body {
+    margin: 0;
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    height: 3.3rem;
+    padding: 0.5rem 4rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    gap: 4rem;
+}
+
+.nav.scrolled {
+    transition: var(--transition);
+    background: 
+    linear-gradient(to top, rgba(0, 0, 0, 0) 0%, #000000 100%),
+    var(--backgroundColour);
+}
+
+.nav a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 0.25rem;
+    font-weight: bold;
+}
+
+.nav a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 0;
+    background-color: var(--accent1);
+    box-shadow: var(--accent1) 0 0 15px;
+    border-radius: 100px;
+}
+
+.nav a:hover::before {
+    width: 100%;
+    transition: var(--transition);
+}
+
+.nav a:hover {
+    transform: translateY(-2px);
+    transition: var(--transition);
+}
+
+.navIcon {
+    height: 1.3rem !important;
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.nav img {
+    height: 4.5rem;
+    width: auto;
+    display: inline-block;
+}
+
+.hero {
+    top: -10rem;
+    height: 1000px;               
+    background-image: 
+        linear-gradient(to bottom, #0e0e0e00 30%, #0e0e0e 100%),
+        url("../images/Posters/TBS3E2.png");
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 0 2rem;
+}
+
+.heroContent {
+    font-size: 3rem;
+    position: absolute;
+    bottom: 5rem;
+    left: 3rem;
+    padding: 0 2rem;
+}
+
+.heroContent h5 {
+    color: var(--muted);
+    font-size: 2rem;
+    line-height: 1rem;
+}
+
+.heroContent h1 {
+    line-height: 0.2rem;
+}
+
+.majorBtn {
+    background-color: white;
+    border-radius: 6px;
+    height: 4rem;
+    width: 10rem;
+    font-size: 2rem;
+    font-weight: 550;
+    padding: 0.5rem 0.5rem;
+}
+
+.majorBtn:hover {
+    transition: var(--transition);
+    outline: 2px solid var(--accent1);
+    outline-offset: 4px;
+    box-shadow: var(--accent1) 0 0 40px;
+}
+
+.minorBtn:hover {
+    transition: var(--transition);
+    outline: 2px solid var(--accent2);
+    outline-offset: 4px;
+    box-shadow: var(--accent2) 0 0 40px;
+}
+
+.minorBtn {
+    color: white;
+    background-color: #8a8a8abb;
+    border-radius: 6px;
+    height: 4rem;
+    width: 15rem;
+    font-size: 2rem;
+    font-weight: 550;
+    padding: 0.5rem 0.5rem;
+}
+
+button img {
+    max-height: 2rem;
+    vertical-align: middle;
+    margin-right: 1rem;
+}
+
+.scroll-container {
+    width: 90%; /* Set a fixed width for the container */
+    overflow-x: scroll; /* Enable horizontal scrolling when content overflows */
+    overflow-y: hidden; /* Hide vertical scrollbar if it might appear */
+    white-space: nowrap; /* Prevent content from wrapping to the next line */
+    padding: 3rem 1.5rem 1.2rem; /* Optional: for spacing */
+    margin: 0 auto;
+}
+
+.showContent {
+    display: inline-block;
+}
+
+.showContent img {
+    display: inline-block; /* Ensure items are treated as inline blocks */
+    width: 20rem; /* Example width for each item */
+    height: auto;
+    margin-right: 10px; /* Spacing between items */
+    box-shadow: #0000009b 0 10px 10px;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.showContent img:hover {
+    transition: var(--transition);
+    transform: scale(1.1);
+
+    outline: 2px solid var(--accent1);
+    outline-offset: 2px;
+    box-shadow: var(--accent2) 0 10px 10px;
+}
+
+#shows h1{
+    left: 5rem;
+    position: absolute;
+    margin: -2rem 0;
+    font-size: 3rem;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    height: 7px;                 /* Thickness of the scrollbar */
+    max-width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;          /* Track color */
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--muted);   /* Scrollbar handle */
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    transition: var(--transition);
+    background: var(--accent1);
+}
+
+.buffer {
+    height: 3rem;
+}
+
+footer {
+    margin-top: 3rem;
+    height: 6rem;
+    background-color: #0a0a0a;
+    border-top: #121212 solid 5px;
+    align-content: center;
+    padding: 0 5rem;
+    color: #7a7a7ac4;
+}
