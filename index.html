@@ -18,11 +18,11 @@
                  userAgent.includes("firetv");
 
     // Redirect based on device type
-    const target = isTV ? "/television/television.html" : "/desktop/index.html";
+    const target = isTV ? "television/television.html" : "desktop/index.html";
     window.location.replace(target);
   </script>
 </head>
 <body>
-  <p>If you're not redirected, <a href="/desktop/index.html">click here </a>to go to the desktop site.</p>
+  <p>If you're not redirected, <a href="desktop/index.html">click here </a>to go to the desktop site.</p>
 </body>
 </html>
