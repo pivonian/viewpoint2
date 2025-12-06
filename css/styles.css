@@ -49,7 +49,7 @@ body {
     box-shadow: var(--accent1) 0 0 20px;
 }
 
-.nav a {
+.nav a:not(.logo) {
     font-size: 1.3rem;
     text-decoration: none;
     position: relative;
@@ -57,7 +57,7 @@ body {
     font-weight: bold;
 }
 
-.nav a::before {
+.nav a:not(.logo)::before {
     content: "";
     position: absolute;
     left: 0;
@@ -69,12 +69,12 @@ body {
     border-radius: 100px;
 }
 
-.nav a:hover::before {
+.nav a:not(.logo):hover::before {
     width: 100%;
     transition: var(--transition);
 }
 
-.nav a:hover {
+.nav a:not(.logo):hover {
     transform: translateY(-2px);
     transition: var(--transition);
 }
@@ -85,8 +85,30 @@ body {
     margin-right: 0.5rem;
 }
 
+.right {
+    margin-left: auto;
+    display: inline-block;
+}
+
+.right .navIcon {
+    margin-right: 2rem;
+}
+
+.right img:hover {
+    transition: var(--transition);
+    outline: 2px solid var(--accent1);
+    outline-offset: 4px;
+    box-shadow: var(--accent1) 0 0 20px;
+}
+
+
+.right img {
+    border-radius: 5px;
+    vertical-align: middle;
+}
+
 .nav img {
-    height: 4.5rem;
+    height: 2.5rem;
     width: auto;
     display: inline-block;
 }
@@ -243,4 +265,8 @@ footer {
     align-content: center;
     padding: 0 5rem;
     color: #7a7a7ac4;
+}
+
+a {
+    color: white;
 }
